@@ -49,7 +49,7 @@
 
 			// If the window that sent this message is not https://crosscommiframe.app, then
 			// that message needs to be thrown out.
-			if (event.origin != "https://priceless-meitner-5ad898.netlify.app/") {
+			if (event.origin != "https://priceless-meitner-5ad898.netlify.app") {
 				console.log("The message came from some site we don't know. We're not processing it.");
 				return;
 			}
