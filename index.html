@@ -14,7 +14,7 @@
 			<div class="col">
 				<h1 style="margin-bottom: 2rem;">parent</h1>
                 <hr style="margin-bottom: 2rem;">
-                <button class="btn btn-lg btn-success float-right" onclick="myfun()">Send</button>
+                <button class="btn btn-lg btn-success float-right" id="target">Send</button>
 				<p class="status-message">Waiting for data from <code>iframe</code>...</p>
 				<div class="user-data alert alert-info" style="display: none;">
 					<p class="user-age"></p>
@@ -78,7 +78,7 @@
 				}, 5000);
 			});
         }
-        function myfun(e){
+        $("form[name='user_data']").click(function(e) {
 			// Prevent the form from submitting via its default manner.
 			e.preventDefault();
 			e.stopPropagation();
@@ -119,7 +119,7 @@
 			//		user_height: $("input[name='user_height']").val(),
 			//	},
 			//	"*");
-        };
+        });
 	</script>
 </body>
 </html>
